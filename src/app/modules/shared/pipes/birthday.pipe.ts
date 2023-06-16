@@ -6,6 +6,6 @@ import { Pipe, PipeTransform } from '@angular/core';
 
 export class BirthdayPipe implements PipeTransform {
     transform(birthday: Date): string {
-        return 'My birthday is on ' + birthday;
+        return 'I was born on ' + birthday;
     }
 }
