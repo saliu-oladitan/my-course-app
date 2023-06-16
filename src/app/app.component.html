@@ -1,0 +1,35 @@
+<app-header title="This is the text passed" *ngIf="isHeaderVisible"></app-header>  
+
+<form *ngIf="formGroup" [formGroup]="formGroup">
+<p>
+  <mat-form-field appearance="fill">
+    <mat-label>Name</mat-label>
+    <input  required minlength="4" formControlName = "name" matInput placeholder="Name">
+    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+  </mat-form-field>
+</p>
+<p>
+  <mat-form-field appearance="fill">
+    <mat-label>Surname</mat-label>
+    <input formControlName = "surname" matInput placeholder="Surname">
+    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+  </mat-form-field>
+</p>
+  <button (click)="onFormSubmit()">Submit</button>
+</form>
+
+<app-footer></app-footer>
+
+
+
+
+
+
+<!-- <mat-card>
+  <mat-card-content>Simple card</mat-card-content>
+</mat-card>
+
+<button mat-raised-button color="primary">Primary</button>
+<mat-icon>menu</mat-icon>
+<mat-icon>home</mat-icon>
+<br><br> -->

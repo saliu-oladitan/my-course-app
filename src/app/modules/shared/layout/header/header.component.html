@@ -1,0 +1,16 @@
+<div>
+    <h1 [ngStyle]="{'font-style': headerStyle}">{{title}}</h1>
+    <p *ngFor="let number1 of myArray">
+        <!-- {{number1}} -->
+        <span *ngIf="number1 % 2 === 0">{{number1}}</span>
+    </p>
+    <p>
+        {{"99" | currency: 'EUR'}} <br>
+
+        {{"56.789" | number: '1.0-2'}} <br>
+
+        {{isoDate | date: 'dd MMM yyyy'}} <br>
+
+        {{ birthday | birthday}} <br>
+    </p>
+</div>
