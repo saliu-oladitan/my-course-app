@@ -14,13 +14,16 @@ import { MatInputModule } from '@angular/material/input';
 import { ProfileComponent } from './modules/profile/profile.component';
 import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
+import { ProductComponent } from './modules/product/product.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
   declarations: [
     AppComponent,    
     HomeComponent,
-    ProfileComponent
+    ProfileComponent,
+    ProductComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +37,8 @@ import { AppRoutingModule } from './app-routing.module';
     MatInputModule,
     ReactiveFormsModule,
     RouterModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
