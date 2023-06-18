@@ -1,5 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { Observable, Subscription, of } from 'rxjs';
 
 @Component({
@@ -18,7 +19,8 @@ export class HomeComponent {
     formGroup: FormGroup | undefined;
   
     constructor(
-      private formBuilder: FormBuilder
+      private formBuilder: FormBuilder,
+      private router: Router
     ) {
     }
     
@@ -59,5 +61,10 @@ export class HomeComponent {
     ngOnDestroy(): void {
       this.numberSubscription?.unsubscribe();
       this.formSubscription?.unsubscribe();
+    }
+
+    goToProfileAndLogCabbage(): void {
+      console.log('Cabbage');
+      this.router.navigate(['/profile']);
     }
 }
