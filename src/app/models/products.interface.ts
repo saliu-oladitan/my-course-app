@@ -3,7 +3,8 @@ export interface Product {
     title: string;
     description: string;
     price: number;
-    rating: number
+    rating: number;
+    thumbnail: string
 }
 
 export interface ProductResponse {
