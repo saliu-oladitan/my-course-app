@@ -5,7 +5,8 @@
         <mat-card-header>
         <mat-card-title>{{product.title}}</mat-card-title>
         </mat-card-header>
-        <img mat-card-image [src]="product.thumbnail" [attr.alt]="product.title">
+        <!-- <img mat-card-image [src]="product.thumbnail" [attr.alt]="product.title"> -->
+        <img mat-card-image [ngSrc]="product.thumbnail" width="200" height="180" [attr.alt]="product.title">
         <mat-card-content>
         <p>{{ product.description }}</p>
         </mat-card-content>
@@ -13,5 +14,5 @@
 
 </div>
 
-
-<!-- This also works: <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu"> -->
+<!-- <img mat-card-image [src]="product.thumbnail" [attr.alt]="product.title"> -->
+<!-- <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu"> -->
